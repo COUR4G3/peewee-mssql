@@ -14,11 +14,11 @@ Installation
 ============
 Install the latest stable release from Pypi:
 
-    pip install peewee-mssql
+    $ pip install peewee-mssql
 
 Or alternatively, select a release or development version from Github and run:
 
-    python setup.py install
+    $ python setup.py install
 
 Getting Started
 ===============
@@ -34,7 +34,7 @@ building your models for accessing data:
 
     from peewee_mssql import MssqlDatabase
 
-    db = MssqlDatabase('MyDatabase', host='host.example.com', user=r'domain\username', password='password')
+    db = MssqlDatabase('MyDatabase', host='host.example.com', user=r'domain\\username', password='password')
 
 If you are using Microsoft SQL Server 2005 you will need to use the legacy
 datetime data types, simple pass `use_legacy_datetime=True` to the
