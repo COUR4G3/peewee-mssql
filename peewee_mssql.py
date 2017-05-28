@@ -11,8 +11,6 @@ try:
 except ImportError:
     PooledDatabase = None
 
-__version__ = '0.1.1'
-
 class MssqlQueryCompiler(QueryCompiler):
     # TODO: implement limit and offset properly, we can use:
     # SELECT *
