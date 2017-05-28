@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from version import __version__
+from .version import __version__
 
 def long_description():
     descr = open('README.rst', 'r').read()
