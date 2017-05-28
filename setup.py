@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from peewee_mssql import __version__
+__version__ = 0.1.1
 
 def long_description():
     descr = open('README.rst', 'r').read()
