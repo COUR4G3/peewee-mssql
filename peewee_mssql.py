@@ -1,6 +1,8 @@
 from peewee import Database, ImproperlyConfigured, OP, QueryCompiler, CompoundSelect, SQL, Clause, CommaClause
 from playhouse.db_url import register_database
 
+from setup import __version__
+
 try:
     import pymssql
 except ImportError:
