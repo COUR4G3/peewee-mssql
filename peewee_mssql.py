@@ -1,6 +1,8 @@
 from peewee import Database, ImproperlyConfigured, OP, QueryCompiler, CompoundSelect, SQL, Clause, CommaClause
 from playhouse.db_url import register_database
 
+__version__="0.1.1"
+
 try:
     import pymssql
 except ImportError:
@@ -10,8 +12,6 @@ try:
     from playhouse.pool import PooledDatabase
 except ImportError:
     PooledDatabase = None
-
-__version__ = '0.1.0'
 
 class MssqlQueryCompiler(QueryCompiler):
     # TODO: implement limit and offset properly, we can use:
@@ -76,10 +76,8 @@ class MssqlQueryCompiler(QueryCompiler):
 
         # NO OFFSET SUPPORT
 
-        for_update, no_wait = query._for_update
-        if for_update:
-            stmt = 'FOR UPDATE NOWAIT' if no_wait else 'FOR UPDATE'
-            clauses.append(SQL(stmt))
+        if query._for_update:
+            clauses.append(SQL(query._for_update))
 
         return self.build_query(clauses, alias_map)
 

@@ -1,7 +1,5 @@
 from setuptools import setup
 
-from peewee_mssql import __version__
-
 def long_description():
     descr = open('README.rst', 'r').read()
 
@@ -14,7 +12,7 @@ def long_description():
 
 setup(
     name='peewee-mssql',
-    version=__version__,
+    version='0.1.1',
     url='https://github.com/cour4g3/peewee-mssql',
     license='MIT',
     author='Michael de Villiers',
