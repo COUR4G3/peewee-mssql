@@ -39,7 +39,7 @@ setup(
     url='https://github.com/cour4g3/peewee-mssql',
     license='MIT',
     author='Michael de Villiers',
-    author_email='twistedcomplexity@gmail.com',
+    author_email='michael@cour4g3.me',
     description='Database driver to add Microsoft SQL Server/Azure support to Peewee',
     long_description=long_description(),
     py_modules=['peewee_mssql'],

@@ -1,7 +1,7 @@
 from peewee import Database, ImproperlyConfigured, OP, QueryCompiler, CompoundSelect, SQL, Clause, CommaClause
 from playhouse.db_url import register_database
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 try:
     import pymssql
