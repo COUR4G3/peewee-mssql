@@ -76,10 +76,11 @@ class MssqlQueryCompiler(QueryCompiler):
 
         # NO OFFSET SUPPORT
 
-        for_update, no_wait = query._for_update
-        if for_update:
-            stmt = 'FOR UPDATE NOWAIT' if no_wait else 'FOR UPDATE'
-            clauses.append(SQL(stmt))
+        if query._for_update:
+            for_update, no_wait = query._for_update
+            if for_update:
+                stmt = 'FOR UPDATE NOWAIT' if no_wait else 'FOR UPDATE'
+                clauses.append(SQL(stmt))
 
         return self.build_query(clauses, alias_map)
 
