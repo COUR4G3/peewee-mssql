@@ -45,7 +45,7 @@ setup(
     py_modules=['peewee_mssql'],
     platforms='any',
     install_requires=[
-        'peewee',
+        'peewee<=2.10.2',
         'pymssql',
     ],
     classifiers=[
