@@ -1,5 +1,8 @@
 Peewee
 ######
+
+**Does not work with the latest 3.x version of Peewee, use 2.x for now.**
+
 A database driver to add Microsoft SQL Server and Azure support using
 `pymssql <http://pymssql.org>`__ and `FreeTDS <http://freetds.org>`__ in
 Peewee and should run on most Unix-like systems, Microsoft Windows and Mac OS X.
@@ -14,10 +17,14 @@ Installation
 ============
 Install the latest stable release from Pypi:
 
+.. code-block:: console
+    
     $ pip install peewee-mssql
 
 Or alternatively, select a release or development version from Github and run:
 
+.. code-block:: console
+    
     $ python setup.py install
 
 Getting Started
